@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<head>
+    <title>Redirecting...</title>
+</head>
+<body style="">
+<style>
+  body {
+    margin: 0px;
+    background-color: white;
+    width: 1280px;
+    height: 720px;
+    font-size: 50px;
+  }
+  a {
+    margin: 35px;
+  }
+  a:hover { border: 2px solid blue;}
+</style>
+
+<a href="<%= settings.redirect_url %>?r=<%= rand() %>&<%=  request.query_string %>"><%= settings.redirect_url %></a>
+<script type="text/javascript">
+    location.href = "<%= options.redirect_url %>?r=<%= rand() %>&<%=  request.query_string %>";
+</script>
+</body>
+</html>
